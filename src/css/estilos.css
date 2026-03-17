@@ -1,0 +1,91 @@
+/* ── Reset global ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Variables CSS (Custom Properties) ── */
+:root {
+    --color-primary: #065A82;
+    --color-secondary: #1C7293;
+    --color-dark: #21295C;
+    --color-text: #000000;
+    --color-grey: #808080;
+    --color-highlight: #E8F4F8;
+    --color-bg: #F5F5F5;
+    --color-white: #FFFFFF;
+    --font-base: "Arial", Helvetica, sans-serif;
+    --radius: 6px;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Base documento ── */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+/* ── Contenedor centrado ── */
+.container {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ── Header fijo ── */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-primary);
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-inner {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    display: flex;
+    /* se retomará en profundidad en Post-Contenido
+2 */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.main-nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.main-nav a:hover {
+    opacity: 0.75;
+}
+
+/* Compensar header fijo: el contenido no queda tapado */
+main {
+    padding-top: 70px;
+}
