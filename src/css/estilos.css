@@ -219,3 +219,90 @@ main {
     color: #2E7D32;
     border: 2px solid #2E7D32;
 }
+
+.contact-section {
+    padding: 3rem 0 4rem;
+    background: var(--color-white);
+}
+
+.contact-form {
+    max-width: 560px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: 0.4rem;
+}
+
+/* Selector de atributo: solo inputs de texto y email */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--color-grey);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--color-text);
+    background: var(--color-white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Pseudo-clase :focus para accesibilidad */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(6, 90, 130, 0.2);
+}
+
+/* Pseudo-elemento ::placeholder */
+::placeholder {
+    color: var(--color-grey);
+    font-style: italic;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background: var(--color-secondary);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--color-dark);
+    color: var(--color-white);
+    font-size: 0.85rem;
+}
